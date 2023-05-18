@@ -8,17 +8,20 @@ type Props = {
 
 export function SidebarToggle({ expanded, setExpanded }: Props) {
   return (
-    <button onClick={() => setExpanded(!expanded)} className="w-6 h-6">
+    <button onClick={() => setExpanded(!expanded)}>
       {expanded ? (
-        <FontAwesomeIcon
-          icon={faLeftLong}
-          className="text-neutral-950 dark:text-neutral-100"
-          size="xl"
-        />
+        <>
+          <FontAwesomeIcon
+            icon={faLeftLong}
+            className="text-neutral-500 dark:text-neutral-100"
+            size="xl"
+          />
+          <span className="pl-3">Close</span>
+        </>
       ) : (
         <FontAwesomeIcon
           icon={faRightLong}
-          className="text-neutral-950 dark:text-neutral-100"
+          className="text-neutral-500 dark:text-neutral-100"
           size="xl"
         />
       )}

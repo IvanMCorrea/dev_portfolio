@@ -4,21 +4,15 @@
 
 :root {
   /* Your default theme */
-  --background: white;
-  --foreground: black;
+  --background: #f5f5f5;
+  --foreground: #0a0a0a;
 }
 
-[data-theme='dark'] {
-  --background: black;
-  --foreground: white;
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.sidebar {
+  background-color: rgb(var(--sidebar));
 }

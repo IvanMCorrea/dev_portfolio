@@ -5,14 +5,14 @@ import { SidebarToggle } from "./SidebarToggle";
 
 function Sidebar() {
   const [expanded, setExpanded] = useState<Boolean>(false);
-  const sidebarWidth = expanded ? "w-24" : "w-12";
+  const sidebarWidth = expanded ? "w-64" : "w-18";
 
   return (
     <aside
-      className={`fixed flex left-0 top-0 h-screen py-5 px-3 flex-col ${sidebarWidth}`}
+      className={`fixed flex left-0 top-0 h-screen p-5 flex-col ${sidebarWidth} bg-neutral-300 dark:bg-neutral-800 items-start`}
     >
       <SidebarToggle expanded={expanded} setExpanded={setExpanded} />
-      <ThemeToggle />
+      <ThemeToggle expanded={expanded} />
     </aside>
   );
 }
