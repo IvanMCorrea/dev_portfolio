@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Providers } from "./_components/Providers";
 import Sidebar from "./_components/Sidebar";
+import AppBar from "./_components/AppBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Providers>
           <Sidebar />
           {children}
+          <AppBar />
         </Providers>
       </body>
     </html>

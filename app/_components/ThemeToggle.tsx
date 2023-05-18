@@ -15,10 +15,7 @@ export function ThemeToggle({ expanded }: { expanded: Boolean }) {
     return null;
   }
   return (
-    <button
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="mt-5"
-    >
+    <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
       {theme === "dark" && (
         <FontAwesomeIcon
           icon={faSun}

@@ -9,7 +9,7 @@ function Sidebar() {
 
   return (
     <aside
-      className={`fixed flex left-0 top-0 h-screen p-5 flex-col ${sidebarWidth} bg-neutral-300 dark:bg-neutral-800 items-start`}
+      className={`fixed flex left-0 top-0 h-screen p-5 flex-col ${sidebarWidth} bg-neutral-300 dark:bg-neutral-800 items-start sidebar`}
     >
       <SidebarToggle expanded={expanded} setExpanded={setExpanded} />
       <ThemeToggle expanded={expanded} />
