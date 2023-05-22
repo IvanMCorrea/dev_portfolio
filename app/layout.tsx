@@ -1,9 +1,15 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Kanit, Nunito } from "next/font/google";
 import { Providers } from "./_components/Providers";
 import Sidebar from "./_components/Sidebar";
 import AppBar from "./_components/AppBar";
-const inter = Inter({ subsets: ["latin"] });
+
+export const kanit = Kanit({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Portfolio Ivan Correa",
@@ -18,7 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-neutral-200 dark:bg-neutral-900`}>
+      <body
+        className={`${nunito.className} bg-neutral-200 dark:bg-neutral-900`}
+      >
         <Providers>
           <Sidebar />
           {children}
