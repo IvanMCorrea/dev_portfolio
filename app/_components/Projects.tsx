@@ -12,7 +12,7 @@ function Arrow(props: {
   return (
     <svg
       onClick={props.onClick}
-      className={`arrow ${props.left ? "arrow--left" : "arrow--right"}`}
+      className={`arrow ${props.left ? "-left-14" : "-right-14"}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -32,7 +32,7 @@ const Projects = () => {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     loop: true,
-    slides: { origin: "center", perView: 3, spacing: 20 },
+    slides: { origin: "center", perView: 1, spacing: 20 },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
@@ -84,10 +84,10 @@ const Projects = () => {
   ];
 
   return (
-    <section>
-      <div>
+    <section className="w-full">
+      <div className="mb-5">
         <div className="navigation-wrapper">
-          <div ref={sliderRef} className="flex mb-5 px-20 max-w-5xl">
+          <div ref={sliderRef} className="mb-5 flex overflow-hidden">
             {projects[0] &&
               projects.map(
                 (item, index) =>
