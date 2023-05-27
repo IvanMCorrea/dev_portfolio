@@ -25,7 +25,11 @@ function AppBar() {
         {menu &&
           menu[0] &&
           menu.map((item) => (
-            <Link href={item.link} key={item.id} className="flex flex-col">
+            <Link
+              href={item.link}
+              key={item.id}
+              className="flex flex-col w-20 text-center"
+            >
               <FontAwesomeIcon
                 icon={item.icon}
                 className="text-neutral-500 dark:text-neutral-100 mb-1"
@@ -34,7 +38,7 @@ function AppBar() {
               <span className="text-sm">{item.id}</span>
             </Link>
           ))}
-        <ThemeToggle expanded={false} />
+        <ThemeToggle expanded={false} appbar={true} />
       </div>
     </section>
   );
