@@ -98,6 +98,7 @@ const Projects = () => {
                   item.destacado && (
                     <article
                       className={`keen-slider__slide number-slide${index}`}
+                      key={index}
                     >
                       <Image
                         src={item.image}
@@ -155,9 +156,9 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 bg-neutral-400 dark:bg-neutral-800 p-5 rounded-3xl">
         {projects[0] &&
           projects.map(
-            (item) =>
+            (item, index) =>
               !item.destacado && (
-                <article>
+                <article key={index}>
                   <Image
                     src={item.image}
                     alt="Working Developer"
