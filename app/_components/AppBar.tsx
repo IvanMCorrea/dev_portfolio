@@ -2,11 +2,21 @@
 import React from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFileCode,
+  faHome,
+  faMicrochip,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 function AppBar() {
-  const menu = [{ id: "Home", link: "#", icon: faHome }];
+  const menu = [
+    { id: "Home", link: "#", icon: faHome },
+    { id: "About", link: "#about", icon: faUser },
+    { id: "Technologies", link: "#technologies", icon: faMicrochip },
+    { id: "Projects", link: "#projects", icon: faFileCode },
+  ];
   return (
     <section
       className={`fixed flex justify-center items-center appbar bottom-5 w-screen`}

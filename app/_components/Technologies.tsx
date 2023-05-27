@@ -20,7 +20,7 @@ const Technologies = () => {
   ];
 
   return (
-    <section className="w-full">
+    <section className="w-full py-10" id="technologies">
       <h2 className={`${kanit.className} text-2xl md:text-3xl mb-10`}>
         Technologies
       </h2>
