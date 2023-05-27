@@ -6,7 +6,7 @@ type Props = {};
 const AboutMe = (props: Props) => {
   return (
     <section>
-      <h2 className={`${kanit.className} text-2xl md:text-3xl mb-2`}>
+      <h2 className={`${kanit.className} text-2xl md:text-3xl mb-10`}>
         About me
       </h2>
       <p>

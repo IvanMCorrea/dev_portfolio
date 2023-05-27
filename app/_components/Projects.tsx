@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { kanit } from "../layout";
 
 function Arrow(props: {
   disabled: boolean;
@@ -85,7 +86,10 @@ const Projects = () => {
 
   return (
     <section className="w-full">
-      <div className="mb-5">
+      <h2 className={`${kanit.className} text-2xl md:text-3xl mb-10`}>
+        Projects
+      </h2>
+      <div className="mb-10">
         <div className="navigation-wrapper">
           <div ref={sliderRef} className="mb-5 flex overflow-hidden">
             {projects[0] &&
@@ -148,7 +152,7 @@ const Projects = () => {
           </div>
         )}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 bg-neutral-400 dark:bg-neutral-800 p-5 rounded-3xl">
         {projects[0] &&
           projects.map(
             (item) =>
@@ -161,7 +165,7 @@ const Projects = () => {
                     height={100}
                     priority
                   />
-                  <h3>{item.title}</h3>
+                  <h3 className="font-bold my-2">{item.title}</h3>
                   <p>{item.description}</p>
                 </article>
               )

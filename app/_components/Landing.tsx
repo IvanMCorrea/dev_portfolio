@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import github from "../../public/github.svg";
+import github from "../../public/assets/github.svg";
 import { kanit } from "../layout";
 
 type Props = {};
@@ -9,7 +9,7 @@ const Landing = (props: Props) => {
   return (
     <header className="flex w-full gap-20 justify-center">
       <Image
-        src="/prog.svg"
+        src="/assets/prog.svg"
         alt="Working Developer"
         width={250}
         height={250}
@@ -31,7 +31,7 @@ const Landing = (props: Props) => {
             className="text-neutral-900 dark:text-neutral-100"
           />
           <img
-            src="/linkedin.svg"
+            src="/assets/linkedin.svg"
             alt="Github"
             width={40}
             height={40}
