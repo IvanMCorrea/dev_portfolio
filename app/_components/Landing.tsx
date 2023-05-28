@@ -1,11 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import github from "../../public/assets/github.svg";
-import { kanit } from "../layout";
+import { kanit } from "../assets/font";
 
-type Props = {};
-
-const Landing = (props: Props) => {
+const Landing = () => {
   return (
     <header className="flex w-full gap-20 justify-center">
       <Image

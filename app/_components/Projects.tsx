@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { kanit } from "../layout";
+import { kanit } from "../assets/font";
 import Link from "next/link";
 
 const Projects = () => {

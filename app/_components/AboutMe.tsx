@@ -1,5 +1,5 @@
 import React from "react";
-import { kanit } from "../layout";
+import { kanit } from "../assets/font";
 
 type Props = {};
 
