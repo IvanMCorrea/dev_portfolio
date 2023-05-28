@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { kanit } from "../layout";
+import Link from "next/link";
 
 function Arrow(props: {
   disabled: boolean;
@@ -44,43 +45,67 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Arcane",
+      title: "Matesito Ecommerce",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image: "/prog.svg",
+        "Final project for the Coderhouse React course. The project involves building an e-commerce site using various modern web development tools. The site includes functionalities such as product listing, cart management, and checkout.",
+      image: "/assets/projects/matesito.png",
+      deploy: "https://superlative-crisp-fce7b4.netlify.app/",
+      front: "https://github.com/IvanMCorrea/E-commerce",
+      back: "",
+      tech: "React, CSS, SASS & HTML",
       destacado: true,
     },
     {
       title: "Arcane",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image: "/prog.svg",
+      description: "Final Proyect for Javascript course of CoderHouse.",
+      image: "/assets/projects/arcane.png",
+      deploy: "https://ivanmcorrea.github.io/Arcane/",
+      front: "https://github.com/IvanMCorrea/Arcane",
+      back: "",
+      tech: "Javascript, CSS, SASS & HTML",
       destacado: true,
     },
     {
-      title: "Arcane",
+      title: "Pokemon: Origins",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image: "/prog.svg",
-    },
-    {
-      title: "Arcane",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image: "/prog.svg",
+        "Final Project for Coderhouse in the Web Development course.",
+      image: "/assets/projects/pokemon.png",
+      deploy: "https://superlative-crisp-fce7b4.netlify.app/",
+      front: "https://github.com/IvanMCorrea/E-commerce",
+      back: "",
+      tech: "Bootstrap, CSS, SASS & HTML",
       destacado: true,
     },
     {
-      title: "Arcane",
+      title: "ERP (Enterprise Resource Planning)",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image: "/prog.svg",
+        "A business-focused app designed to efficiently manage employees, customers, expenses, and incomes. It includes organization and optimization of crucial business operations. (In progress)",
+      image: "/assets/projects/erp.png",
+      deploy:
+        "https://64582eab15dd3400087f7496--zingy-dragon-3e07ec.netlify.app/#/login",
+      front: "https://github.com/IvanMCorrea/ERP",
+      back: "https://github.com/IvanMCorrea/ERP_back",
+      tech: "React, MUI (Material UI), MongoDB, Node & Express",
     },
     {
-      title: "Arcane",
+      title: "Rick & Morty Social Network",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image: "/prog.svg",
+        "The application is a social media platform based on the popular TV show Rick & Morty, where users can create an account, log in, and create and view posts made by other users.",
+      image: "/assets/projects/network.png",
+      deploy: "https://red-social-nu.vercel.app/#/login",
+      front: "https://github.com/IvanMCorrea/RedSocial",
+      back: "https://github.com/IvanMCorrea/RedSocialBackend",
+      tech: "React, Typescript, Tailwind, MongoDB, Node & Express",
+    },
+    {
+      title: "Football League Scrapper",
+      description:
+        "Challenge with scrapper to get data for Argentina´s football league.",
+      image: "/assets/projects/scrapper.png",
+      deploy: "https://shimmering-gnome-28eda6.netlify.app/",
+      front: "https://github.com/IvanMCorrea/challenge1_front",
+      back: "https://github.com/IvanMCorrea/challenge1_back",
+      tech: "MongoDB, Node, Express, CSS & HTML",
     },
   ];
 
@@ -103,12 +128,45 @@ const Projects = () => {
                       <Image
                         src={item.image}
                         alt="Working Developer"
-                        width={100}
-                        height={100}
-                        priority
+                        width={500}
+                        height={250}
+                        className="mx-auto mb-5"
                       />
-                      <h3>{item.title}</h3>
+                      <h4
+                        className={`${kanit.className} text-xl md:text-2xl mb-3`}
+                      >
+                        {item.title}
+                      </h4>
                       <p>{item.description}</p>
+                      <div className="my-5">
+                        {item.deploy && (
+                          <Link
+                            href={item.deploy}
+                            target="_blanck"
+                            className="bg-blue-400 dark:bg-blue-800 py-2 px-4 rounded-md mr-2 text-center"
+                          >
+                            Deploy
+                          </Link>
+                        )}
+                        {item.front && (
+                          <Link
+                            href={item.front}
+                            target="_blanck"
+                            className="bg-blue-400 dark:bg-blue-800 py-2 px-4 rounded-md mr-2 text-center"
+                          >
+                            Frontend Code
+                          </Link>
+                        )}
+                        {item.back && (
+                          <Link
+                            href={item.back}
+                            target="_blanck"
+                            className="bg-green-400 dark:bg-green-800 py-2 px-4 rounded-md text-center"
+                          >
+                            Backend Code
+                          </Link>
+                        )}
+                      </div>
                     </article>
                   )
               )}
@@ -153,6 +211,9 @@ const Projects = () => {
           </div>
         )}
       </div>
+      <h3 className={`${kanit.className} text-xl md:text-2xl mb-10`}>
+        More projects
+      </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 bg-neutral-400 dark:bg-neutral-800 p-5 rounded-3xl">
         {projects[0] &&
           projects.map(
@@ -162,12 +223,42 @@ const Projects = () => {
                   <Image
                     src={item.image}
                     alt="Working Developer"
-                    width={100}
-                    height={100}
-                    priority
+                    width={280}
+                    height={150}
                   />
-                  <h3 className="font-bold my-2">{item.title}</h3>
+                  <h4 className={`${kanit.className} text-lg md:text-xl my-3`}>
+                    {item.title}
+                  </h4>
                   <p>{item.description}</p>
+                  <div className="my-5 flex flex-col">
+                    {item.deploy && (
+                      <Link
+                        href={item.deploy}
+                        target="_blanck"
+                        className="bg-blue-400 dark:bg-blue-800 py-2 px-4 rounded-md mb-2 text-center"
+                      >
+                        Deploy
+                      </Link>
+                    )}
+                    {item.front && (
+                      <Link
+                        href={item.front}
+                        target="_blanck"
+                        className="bg-blue-400 dark:bg-blue-800 py-2 px-4 rounded-md mb-2 text-center"
+                      >
+                        Frontend Code
+                      </Link>
+                    )}
+                    {item.back && (
+                      <Link
+                        href={item.back}
+                        target="_blanck"
+                        className="bg-green-400 dark:bg-green-800 py-2 px-4 rounded-md text-center"
+                      >
+                        Backend Code
+                      </Link>
+                    )}
+                  </div>
                 </article>
               )
           )}
