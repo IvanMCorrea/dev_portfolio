@@ -1,11 +1,6 @@
 import "./globals.css";
-import { Kanit, Nunito } from "next/font/google";
+import { Nunito } from "next/font/google";
 import { Providers } from "./_components/Providers";
-
-export const kanit = Kanit({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 const nunito = Nunito({ subsets: ["latin"] });
 
