@@ -1,6 +1,6 @@
 import AboutMe from "./_components/AboutMe";
 import Landing from "./_components/Landing";
-/* import Projects from "./_components/Projects"; */
+import Projects from "./_components/Projects";
 import Technologies from "./_components/Technologies";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
       <Landing />
       <AboutMe />
       <Technologies />
-      {/* <Projects /> */}
+      <Projects />
     </main>
   );
 }

@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
+import "keen-slider/keen-slider.min.css";
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
 import { kanit } from "../assets/font";
+import Image from "next/image";
 import Link from "next/link";
 
 const Projects = () => {
@@ -21,11 +21,7 @@ const Projects = () => {
     },
   });
 
-  function Arrow(props: {
-    disabled: boolean;
-    left?: boolean;
-    onClick: (e: any) => void;
-  }) {
+  function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
     return (
       <svg
         onClick={props.onClick}
@@ -178,16 +174,11 @@ const Projects = () => {
                 onClick={(e: any) =>
                   e.stopPropagation() || instanceRef.current?.prev()
                 }
-                disabled={currentSlide === 0}
               />
 
               <Arrow
                 onClick={(e: any) =>
                   e.stopPropagation() || instanceRef.current?.next()
-                }
-                disabled={
-                  currentSlide ===
-                  instanceRef.current.track.details.slides.length - 1
                 }
               />
             </>
