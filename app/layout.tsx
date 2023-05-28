@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Kanit, Nunito } from "next/font/google";
+import { Providers } from "./_components/Providers";
 
 export const kanit = Kanit({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function RootLayout({
       <body
         className={`${nunito.className} bg-neutral-200 dark:bg-neutral-900`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
