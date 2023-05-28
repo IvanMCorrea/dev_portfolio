@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

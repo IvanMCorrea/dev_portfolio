@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { SidebarToggle } from "./SidebarToggle";
@@ -9,7 +8,6 @@ import {
   faMicrochip,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 function Sidebar() {
   const [expanded, setExpanded] = useState<Boolean>(false);
