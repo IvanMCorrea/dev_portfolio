@@ -24,21 +24,22 @@ export function ThemeToggle({
   return (
     <div className={`${appbar && "flex flex-col w-20 text-center"}`}>
       <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-        {theme === "dark" ||
-          (theme === "system" && (
-            <FontAwesomeIcon
-              icon={faSun}
-              className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
-            />
-          ))}
-        {theme === "light" && (
+        {theme === "light" ? (
           <FontAwesomeIcon
             icon={faMoon}
             className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
           />
+        ) : (
+          <FontAwesomeIcon
+            icon={faSun}
+            className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
+          />
         )}
       </button>
-      {(theme === "dark" && expanded) || (theme === "dark" && appbar) ? (
+      {(theme === "dark" && expanded) ||
+      (theme === "dark" && appbar) ||
+      (theme === "system" && expanded) ||
+      (theme === "system" && appbar) ? (
         <span className={`${!appbar && "pl-3"} ${appbar && "text-sm"}`}>
           Light mode
         </span>
