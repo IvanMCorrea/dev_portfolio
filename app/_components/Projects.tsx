@@ -118,7 +118,7 @@ const Projects = () => {
                 (item, index) =>
                   item.destacado && (
                     <article
-                      className={`keen-slider__slide number-slide${index}`}
+                      className={`keen-slider__slide number-slide${index} text-center`}
                       key={index}
                     >
                       <Image
