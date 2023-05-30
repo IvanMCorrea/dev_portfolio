@@ -14,10 +14,14 @@ const Landing = () => {
         priority
       />
       <section className="max-w-md flex flex-col gap-2">
-        <h1 className={`${kanit.className} text-4xl md:text-5xl`}>
+        <h1
+          className={`${kanit.className} text-4xl md:text-5xl font-semibold bg-gradient-to-r from-gray-700 to-slate-700 dark:from-slate-300 dark:to-zinc-200 bg-clip-text text-transparent`}
+        >
           Ivan Correa
         </h1>
-        <span className={`${kanit.className} text-2xl md:text-3xl`}>
+        <span
+          className={`${kanit.className} text-2xl md:text-3xl bg-gradient-to-r from-gray-700 to-slate-700 dark:from-slate-300 dark:to-zinc-200 bg-clip-text text-transparent`}
+        >
           Full Stack Developer
         </span>
         <div className="flex gap-3 items-center">

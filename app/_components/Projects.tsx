@@ -107,7 +107,9 @@ const Projects = () => {
 
   return (
     <section className="w-full py-10" id="projects">
-      <h2 className={`${kanit.className} text-2xl md:text-3xl py-10`}>
+      <h2
+        className={`${kanit.className} text-2xl md:text-3xl py-10 bg-gradient-to-r from-gray-700 dark:from-slate-300 dark:to-zinc-200 to-slate-700 bg-clip-text text-transparent`}
+      >
         Projects
       </h2>
       <div className="mb-10">
@@ -202,7 +204,9 @@ const Projects = () => {
           </div>
         )}
       </div>
-      <h3 className={`${kanit.className} text-xl md:text-2xl py-10`}>
+      <h3
+        className={`${kanit.className} text-xl md:text-2xl py-10 bg-gradient-to-r from-gray-700 dark:from-slate-300 dark:to-zinc-200 to-slate-700 bg-clip-text text-transparent`}
+      >
         More projects
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 bg-neutral-400 dark:bg-neutral-800 p-5 rounded-3xl">

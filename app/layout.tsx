@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${nunito.className} bg-neutral-200 dark:bg-neutral-900`}
+        className={`${nunito.className} bg-gradient-to-r from-slate-200 to-zinc-300 dark:from-neutral-900 dark:to-slate-800`}
       >
         <Providers>{children}</Providers>
       </body>

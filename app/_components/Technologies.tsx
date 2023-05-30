@@ -21,7 +21,9 @@ const Technologies = () => {
 
   return (
     <section className="w-full py-10" id="technologies">
-      <h2 className={`${kanit.className} text-2xl md:text-3xl py-10`}>
+      <h2
+        className={`${kanit.className} text-2xl md:text-3xl py-10 bg-gradient-to-r from-gray-700 dark:from-slate-300 dark:to-zinc-200 to-slate-700 bg-clip-text text-transparent`}
+      >
         Technologies
       </h2>
       <article className="flex grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-10 justify-between items-center bg-neutral-400 dark:bg-neutral-800 p-5 rounded-3xl my-5">
