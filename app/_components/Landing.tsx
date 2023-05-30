@@ -13,28 +13,32 @@ const Landing = () => {
         height={250}
         priority
       />
-      <section className="max-w-md flex flex-col gap-3">
+      <section className="max-w-md flex flex-col gap-2">
         <h1 className={`${kanit.className} text-4xl md:text-5xl`}>
           Ivan Correa
         </h1>
         <span className={`${kanit.className} text-2xl md:text-3xl`}>
           Full Stack Developer
         </span>
-        <div className="flex gap-2">
-          <Image
-            src={github}
-            alt="github"
-            width={40}
-            height={40}
-            className="text-neutral-900 dark:text-neutral-100"
-          />
-          <img
-            src="/assets/linkedin.svg"
-            alt="Github"
-            width={40}
-            height={40}
-            className="text-blue-600"
-          />
+        <div className="flex gap-3 items-center">
+          <a href="https://github.com/IvanMCorrea" target="_blanck">
+            <Image
+              src={github}
+              alt="github"
+              width={40}
+              height={40}
+              className="hover:scale-110 transition duration-300 ease-in-out"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/ivanmcorrea/" target="_blanck">
+            <img
+              src="/assets/linkedin.svg"
+              alt="Github"
+              width={40}
+              height={40}
+              className="hover:scale-110 transition duration-300 ease-in-out"
+            />
+          </a>
         </div>
       </section>
     </header>

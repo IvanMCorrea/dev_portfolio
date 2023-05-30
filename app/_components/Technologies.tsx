@@ -29,7 +29,7 @@ const Technologies = () => {
           technologiesData[0] &&
           technologiesData.map((tech) => (
             <div
-              className=" hover:scale-110 transition duration-300 ease-in-out"
+              className="hover:scale-110 transition duration-300 ease-in-out"
               key={tech.title}
             >
               <Image
