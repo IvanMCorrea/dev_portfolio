@@ -13,6 +13,7 @@ export function ThemeToggle({
 }) {
   const { setTheme, theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -23,12 +24,13 @@ export function ThemeToggle({
   return (
     <div className={`${appbar && "flex flex-col w-20 text-center"}`}>
       <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-        {theme === "dark" && (
-          <FontAwesomeIcon
-            icon={faSun}
-            className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
-          />
-        )}
+        {theme === "dark" ||
+          (theme === "system" && (
+            <FontAwesomeIcon
+              icon={faSun}
+              className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
+            />
+          ))}
         {theme === "light" && (
           <FontAwesomeIcon
             icon={faMoon}
