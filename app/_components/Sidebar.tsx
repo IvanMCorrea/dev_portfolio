@@ -3,6 +3,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { SidebarToggle } from "./SidebarToggle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBriefcase,
   faFileCode,
   faHome,
   faMicrochip,
@@ -15,6 +16,7 @@ function Sidebar() {
   const menu = [
     { id: "Home", link: "#", icon: faHome },
     { id: "About", link: "#about", icon: faUser },
+    { id: "Experience", link: "#experience", icon: faBriefcase },
     { id: "Technologies", link: "#technologies", icon: faMicrochip },
     { id: "Projects", link: "#projects", icon: faFileCode },
   ];

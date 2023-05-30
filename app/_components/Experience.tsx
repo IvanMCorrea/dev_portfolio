@@ -1,8 +1,12 @@
 import React from "react";
+import { kanit } from "../assets/font";
 
 const Experience = () => {
   return (
     <section className="w-full py-10" id="experience">
+      <h2 className={`${kanit.className} text-2xl md:text-3xl py-10`}>
+        Experience
+      </h2>
       <div className="container mx-auto w-full h-full">
         <div className="relative wrap overflow-hidden h-full">
           <div
