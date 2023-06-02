@@ -25,7 +25,7 @@ const Projects = () => {
     return (
       <svg
         onClick={props.onClick}
-        className={`arrow ${props.left ? "-left-14" : "-right-14"}`}
+        className={`arrow ${props.left ? "-left-10" : "-right-10"}`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
