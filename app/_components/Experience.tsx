@@ -81,7 +81,10 @@ const Experience = () => {
         </div>
         <div className="relative sm:hidden h-full">
           {jobs.map((job, index) => (
-            <article className="bg-neutral-100 dark:bg-neutral-800 p-5 rounded-3xl my-5">
+            <article
+              className="bg-neutral-100 dark:bg-neutral-800 p-5 rounded-3xl my-5"
+              key={index}
+            >
               <div className="flex justify-between items-end mb-3">
                 <h3 className="font-bold text-xl">{job.title}</h3>
                 <span className="text-sm">{job.from_to}</span>
