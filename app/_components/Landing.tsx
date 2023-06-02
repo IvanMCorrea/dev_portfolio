@@ -1,9 +1,24 @@
 import Image from "next/image";
 import React from "react";
-import github from "../../public/assets/github.svg";
 import { kanit } from "../assets/font";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Landing = () => {
+  const links = [
+    {
+      name: "Linkedin",
+      url: "https://www.linkedin.com/in/ivanmcorrea/",
+      icon: faLinkedin,
+      color: "text-[#0A66C2]",
+    },
+    {
+      name: "Github",
+      url: "https://github.com/IvanMCorrea",
+      icon: faGithub,
+      color: "",
+    },
+  ];
   return (
     <header className="flex w-full gap-20 justify-center">
       <Image
@@ -25,24 +40,16 @@ const Landing = () => {
           Full Stack Developer
         </span>
         <div className="flex gap-3 items-center">
-          <a href="https://github.com/IvanMCorrea" target="_blanck">
-            <Image
-              src={github}
-              alt="github"
-              width={40}
-              height={40}
-              className="hover:scale-110 transition duration-300 ease-in-out"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/ivanmcorrea/" target="_blanck">
-            <img
-              src="/assets/linkedin.svg"
-              alt="Github"
-              width={40}
-              height={40}
-              className="hover:scale-110 transition duration-300 ease-in-out"
-            />
-          </a>
+          {links &&
+            links[0] &&
+            links.map((item) => (
+              <a href={item.url} target="_blanck" title={item.name}>
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  className={`h-12 w-12 hover:scale-110 ${item.color}`}
+                />
+              </a>
+            ))}
         </div>
       </section>
     </header>

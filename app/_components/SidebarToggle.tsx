@@ -16,14 +16,14 @@ export function SidebarToggle({ expanded, setExpanded }: Props) {
         <>
           <FontAwesomeIcon
             icon={faLeftLong}
-            className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
+            className="text-neutral-700 dark:text-neutral-100 h-5 w-5"
           />
           <span className="pl-3">Close</span>
         </>
       ) : (
         <FontAwesomeIcon
           icon={faRightLong}
-          className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
+          className="text-neutral-700 dark:text-neutral-100 h-5 w-5"
         />
       )}
       <span className="sr-only">Toggle theme</span>

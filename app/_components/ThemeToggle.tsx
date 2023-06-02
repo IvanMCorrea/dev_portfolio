@@ -27,12 +27,12 @@ export function ThemeToggle({
         {theme === "light" ? (
           <FontAwesomeIcon
             icon={faMoon}
-            className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
+            className="text-neutral-700 dark:text-neutral-100 h-5 w-5"
           />
         ) : (
           <FontAwesomeIcon
             icon={faSun}
-            className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
+            className="text-neutral-700 dark:text-neutral-100 h-5 w-5"
           />
         )}
       </button>

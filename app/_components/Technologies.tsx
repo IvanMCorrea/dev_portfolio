@@ -4,19 +4,19 @@ import Image from "next/image";
 
 const Technologies = () => {
   const technologiesData = [
-    { title: "React JS", image: "/assets/React.svg" },
-    { title: "Node JS", image: "/assets/node-js.svg" },
-    { title: "Next JS", image: "/assets/next.svg" },
-    { title: "Tailwind CSS", image: "/assets/tailwind_logo.svg" },
-    { title: "Material UI", image: "/assets/mui_logo.svg" },
-    { title: "Bootstrap", image: "/assets/Bootstrap_logo.svg" },
-    { title: "SASS", image: "/assets/Sass_Logo.svg" },
-    { title: "Typescript", image: "/assets/typescript_logo.svg" },
-    { title: "Javascript", image: "/assets/js_logo.svg" },
-    { title: "CCS", image: "/assets/CSS3_logo.svg" },
-    { title: "HTML", image: "/assets/HTML5_logo.svg" },
-    { title: "NPM", image: "/assets/Npm_logo.svg" },
-    { title: "Git", image: "/assets/Git_logo.svg" },
+    { title: "React JS", image: "/assets/logos/React.svg" },
+    { title: "Node JS", image: "/assets/logos/node-js.svg" },
+    { title: "Next JS", image: "/assets/logos/next.svg" },
+    { title: "Tailwind CSS", image: "/assets/logos/tailwind_logo.svg" },
+    { title: "Material UI", image: "/assets/logos/mui_logo.svg" },
+    { title: "Bootstrap", image: "/assets/logos/Bootstrap_logo.svg" },
+    { title: "SASS", image: "/assets/logos/Sass_Logo.svg" },
+    { title: "Typescript", image: "/assets/logos/typescript_logo.svg" },
+    { title: "Javascript", image: "/assets/logos/js_logo.svg" },
+    { title: "CCS", image: "/assets/logos/CSS3_logo.svg" },
+    { title: "HTML", image: "/assets/logos/HTML5_logo.svg" },
+    { title: "NPM", image: "/assets/logos/Npm_logo.svg" },
+    { title: "Git", image: "/assets/logos/Git_logo.svg" },
   ];
 
   return (

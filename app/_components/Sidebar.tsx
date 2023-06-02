@@ -38,7 +38,7 @@ function Sidebar() {
             <a href={item.link} key={item.id}>
               <FontAwesomeIcon
                 icon={item.icon}
-                className="text-neutral-500 dark:text-neutral-100 h-5 w-5"
+                className="text-neutral-700 dark:text-neutral-100 h-5 w-5"
               />
               {expanded && <span className="pl-3">{item.id}</span>}
             </a>
