@@ -6,7 +6,7 @@ const Technologies = () => {
   const technologiesData = [
     { title: "React JS", image: "/assets/logos/React.svg" },
     { title: "Node JS", image: "/assets/logos/node-js.svg" },
-    { title: "Next JS", image: "/assets/logos/next.svg" },
+    { title: "Next JS", image: "/assets/logos/nextjs_logo.svg" },
     { title: "Tailwind CSS", image: "/assets/logos/tailwind_logo.svg" },
     { title: "Material UI", image: "/assets/logos/mui_logo.svg" },
     { title: "Bootstrap", image: "/assets/logos/Bootstrap_logo.svg" },
@@ -26,7 +26,7 @@ const Technologies = () => {
       >
         Technologies
       </h2>
-      <article className="flex grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-10 justify-between items-center bg-neutral-400 dark:bg-neutral-800 p-5 rounded-3xl my-5">
+      <article className="flex grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-10 justify-between items-center bg-neutral-100 dark:bg-neutral-800 p-5 rounded-3xl my-5">
         {technologiesData &&
           technologiesData[0] &&
           technologiesData.map((tech) => (

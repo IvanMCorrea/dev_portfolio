@@ -22,7 +22,7 @@ function Sidebar() {
   ];
   return (
     <aside
-      className={`fixed flex left-0 top-0 h-screen px-5 py-10 flex-col ${sidebarWidth} bg-neutral-300 dark:bg-neutral-800 items-start justify-between sidebar z-50`}
+      className={`fixed flex left-0 top-0 h-screen px-5 py-10 flex-col ${sidebarWidth} bg-neutral-100 dark:bg-neutral-800 items-start justify-between sidebar z-50`}
     >
       <div>
         <SidebarToggle expanded={expanded} setExpanded={setExpanded} />

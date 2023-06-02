@@ -6,7 +6,7 @@ import Technologies from "./_components/Technologies";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center m-auto px-12 md:px-24 py-12 max-w-5xl gap-20">
+    <main className="flex min-h-screen flex-col items-center m-auto px-12 md:px-24 py-12 max-w-5xl md:gap-20">
       <Landing />
       <AboutMe />
       <Experience />

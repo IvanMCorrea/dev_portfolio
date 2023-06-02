@@ -209,7 +209,7 @@ const Projects = () => {
       >
         More projects
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 bg-neutral-400 dark:bg-neutral-800 p-5 rounded-3xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 bg-neutral-100 dark:bg-neutral-800 p-10 rounded-3xl">
         {projects[0] &&
           projects.map(
             (item, index) =>
