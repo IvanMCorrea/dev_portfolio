@@ -14,8 +14,8 @@ function AppBar() {
   const menu = [
     { id: "Home", link: "#", icon: faHome },
     { id: "About", link: "#about", icon: faUser },
-    { id: "Experience", link: "#experience", icon: faBriefcase },
-    { id: "Technologies", link: "#technologies", icon: faMicrochip },
+    { id: "Exp", link: "#experience", icon: faBriefcase },
+    { id: "Tech", link: "#technologies", icon: faMicrochip },
     { id: "Projects", link: "#projects", icon: faFileCode },
   ];
   return (

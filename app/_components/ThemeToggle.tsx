@@ -36,17 +36,23 @@ export function ThemeToggle({
           />
         )}
       </button>
-      {(theme === "dark" && expanded) ||
-      (theme === "dark" && appbar) ||
-      (theme === "system" && expanded) ||
-      (theme === "system" && appbar) ? (
+
+      {(theme === "dark" && expanded) || (theme === "system" && expanded) ? (
         <span className={`${!appbar && "pl-3"} ${appbar && "text-sm"}`}>
           Light mode
         </span>
       ) : null}
-      {(theme === "light" && expanded) || (theme === "light" && appbar) ? (
+      {theme === "light" && expanded ? (
         <span className={`${!appbar && "pl-3"} ${appbar && "text-sm"}`}>
           Dark mode
+        </span>
+      ) : null}
+      {(theme === "dark" && appbar) || (theme === "system" && appbar) ? (
+        <span className="text-sm">Light</span>
+      ) : null}
+      {theme === "light" && appbar ? (
+        <span className={`${!appbar && "pl-3"} ${appbar && "text-sm"}`}>
+          Dark
         </span>
       ) : null}
       <span className="sr-only">Toggle theme</span>
