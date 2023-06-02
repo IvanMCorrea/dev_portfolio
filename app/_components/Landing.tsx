@@ -21,13 +21,9 @@ const Landing = () => {
   ];
   return (
     <header className="flex w-full gap-20 justify-center">
-      <Image
-        src="/assets/prog.svg"
-        alt="Working Developer"
-        width={250}
-        height={250}
-        priority
-      />
+      <div className="relative w-[50%] max-sm:hidden">
+        <Image src="/assets/prog.svg" alt="Working Developer" fill priority />
+      </div>
       <section className="max-w-md flex flex-col gap-2">
         <h1
           className={`${kanit.className} text-4xl md:text-5xl font-semibold bg-gradient-to-r from-gray-700 to-slate-700 dark:from-slate-300 dark:to-zinc-200 bg-clip-text text-transparent`}
