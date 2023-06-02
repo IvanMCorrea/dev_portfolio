@@ -43,7 +43,12 @@ const Landing = () => {
           {links &&
             links[0] &&
             links.map((item) => (
-              <a href={item.url} target="_blanck" title={item.name}>
+              <a
+                href={item.url}
+                target="_blanck"
+                title={item.name}
+                key={item.name}
+              >
                 <FontAwesomeIcon
                   icon={item.icon}
                   className={`h-12 w-12 hover:scale-110 ${item.color}`}
