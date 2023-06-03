@@ -21,7 +21,7 @@ const Experience = () => {
           </li>
         </ul>
       ),
-      from_to: "08/2022 a 05/2023",
+      from_to: "08/2022 - 05/2023",
     },
     {
       title: "Casa Butera",
@@ -33,18 +33,13 @@ const Experience = () => {
           <li className="mb-2">
             Configure Mercado Libre account and it´s publications.
           </li>
-          <li className="mb-2">
-            Creation and maintenance of Website and profile in Google “My
-            Business”.
-          </li>
-          <li className="mb-2">
-            Content creation and updating of social networks.
-          </li>
+          <li className="mb-2">Handle social media accounts.</li>
+          <li className="mb-2">Content creation.</li>
           <li className="mb-2">Stock configuration in Excel.</li>
           <li className="mb-2">Billing.</li>
         </ul>
       ),
-      from_to: "12/2013 a 12/2022",
+      from_to: "12/2013 - 12/2022",
     },
   ];
 
@@ -91,11 +86,11 @@ const Experience = () => {
               className="bg-neutral-100 dark:bg-neutral-800 p-5 rounded-3xl my-5"
               key={index}
             >
-              <div className="flex justify-between items-end mb-3">
+              <div className="flex justify-between items-end mb-1">
                 <h3 className="font-bold text-xl">{job.title}</h3>
                 <span className="text-sm mb-2 font-medium">{job.from_to}</span>
               </div>
-              <h5 className="font-semibold text-md">{job.position}</h5>
+              <h5 className="font-semibold text-md mb-2">{job.position}</h5>
               {job.description && job.description}
             </article>
           ))}
