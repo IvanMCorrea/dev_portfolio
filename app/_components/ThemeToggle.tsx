@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faCloudSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
 export function ThemeToggle({
@@ -34,7 +34,7 @@ export function ThemeToggle({
           />
         ) : (
           <FontAwesomeIcon
-            icon={faSun}
+            icon={faCloudSun}
             className="text-neutral-700 dark:text-neutral-100 h-5 w-5"
           />
         )}
