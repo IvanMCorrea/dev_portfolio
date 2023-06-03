@@ -5,16 +5,18 @@ const Experience = () => {
   const jobs = [
     {
       title: "Eiche Chile",
+      position: "Fullstack Developer",
+      technologies: "",
       description: (
-        <ul className="text-sm leading-snug tracking-wide text-opacity-100">
+        <ul className="text-sm leading-snug tracking-wide text-opacity-100 list-disc">
           <li className="mb-2">
-            • Frontend design using React, React Native and Vue frameworks.
+            Frontend design using React, React Native and Vue frameworks.
           </li>
           <li className="mb-2">
-            • Handle backend in Node with Adonis and Express frameworks.
+            Handle backend in Node with Adonis and Express frameworks.
           </li>
           <li className="mb-2">
-            • Collaborate with other developers and designers to deliver
+            Collaborate with other developers and designers to deliver
             high-quality projects on time and respecting customer requirements.
           </li>
         </ul>
@@ -23,20 +25,23 @@ const Experience = () => {
     },
     {
       title: "Casa Butera",
+      position: "Ecommerce Manager",
+      technologies: "",
       description: (
-        <ul className="text-sm font-medium leading-snug tracking-wide text-opacity-100">
+        <ul className="text-sm leading-snug tracking-wide text-opacity-100 list-disc">
+          <li>Create Fishing Industry Ecommerce Website</li>
           <li className="mb-2">
-            • Publication of products and sale in Mercado Libre.
+            Configure Mercado Libre account and it´s publications.
           </li>
           <li className="mb-2">
-            • Creation and maintenance of Website and profile in Google “My
+            Creation and maintenance of Website and profile in Google “My
             Business”.
           </li>
           <li className="mb-2">
-            • Content creation and updating of social networks.
+            Content creation and updating of social networks.
           </li>
-          <li className="mb-2">• Stock configuration in Excel.</li>
-          <li className="mb-2">• Billing.</li>
+          <li className="mb-2">Stock configuration in Excel.</li>
+          <li className="mb-2">Billing.</li>
         </ul>
       ),
       from_to: "12/2013 a 12/2022",
@@ -70,10 +75,11 @@ const Experience = () => {
                 <h1 className="mx-auto font-semibold text-lg"></h1>
               </div>
               <article className="order-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                <div className="flex justify-between items-end mb-3">
+                <div className="flex justify-between items-end mb-2">
                   <h3 className="font-bold text-xl">{job.title}</h3>
-                  <span className="text-sm">{job.from_to}</span>
+                  <span className="text-sm font-medium">{job.from_to}</span>
                 </div>
+                <h5 className="font-semibold text-md mb-2">{job.position}</h5>
                 {job.description && job.description}
               </article>
             </div>
@@ -87,8 +93,9 @@ const Experience = () => {
             >
               <div className="flex justify-between items-end mb-3">
                 <h3 className="font-bold text-xl">{job.title}</h3>
-                <span className="text-sm">{job.from_to}</span>
+                <span className="text-sm mb-2 font-medium">{job.from_to}</span>
               </div>
+              <h5 className="font-semibold text-md">{job.position}</h5>
               {job.description && job.description}
             </article>
           ))}
