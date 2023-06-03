@@ -21,7 +21,7 @@ const Landing = () => {
   ];
   return (
     <header className="flex w-full gap-20 justify-center">
-      <div className="relative w-[50%] max-sm:hidden">
+      <div className="relative w-[25%] max-sm:hidden">
         <Image src="/assets/prog.svg" alt="Working Developer" fill priority />
       </div>
       <section className="max-w-md flex flex-col gap-2">
@@ -57,7 +57,7 @@ const Landing = () => {
           download="C.V. Ivan Correa.pdf"
           className="font-semibold bg-gradient-to-r from-fuchsia-500 to-pink-500 py-2 px-4 rounded-md mb-2 text-center uppercase hover:scale-110 transition-all ease-in-out duration-300"
         >
-          Download C.V.
+          Download Resume
         </a>
       </section>
     </header>
