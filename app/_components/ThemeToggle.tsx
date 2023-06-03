@@ -23,7 +23,10 @@ export function ThemeToggle({
   }
   return (
     <div className={`${appbar && "flex flex-col w-20 text-center"}`}>
-      <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+      <button
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        title="Toggle theme"
+      >
         {theme === "light" ? (
           <FontAwesomeIcon
             icon={faMoon}

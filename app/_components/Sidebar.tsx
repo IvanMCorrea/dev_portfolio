@@ -35,7 +35,7 @@ function Sidebar() {
         {menu &&
           menu[0] &&
           menu.map((item) => (
-            <a href={item.link} key={item.id}>
+            <a href={item.link} key={item.id} title={item.id}>
               <FontAwesomeIcon
                 icon={item.icon}
                 className="text-neutral-700 dark:text-neutral-100 h-5 w-5"

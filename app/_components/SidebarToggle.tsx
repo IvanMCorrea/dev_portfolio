@@ -11,6 +11,7 @@ export function SidebarToggle({ expanded, setExpanded }: Props) {
     <button
       onClick={() => setExpanded(!expanded)}
       className="flex items-center"
+      title={expanded ? "Collapse" : "Expand"}
     >
       {expanded ? (
         <>
