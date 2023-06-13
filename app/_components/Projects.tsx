@@ -5,6 +5,16 @@ import { useKeenSlider } from "keen-slider/react";
 import { kanit } from "../assets/font";
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBootstrap,
+  faCss3Alt,
+  faHtml5,
+  faNodeJs,
+  faReact,
+  faSass,
+  faSquareJs,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState<Number>(0);
@@ -46,7 +56,7 @@ const Projects = () => {
       </svg>
     );
   }
-
+  //TODO: Add techs with icons
   const projects = [
     {
       title: "Matesito Ecommerce",
@@ -56,7 +66,35 @@ const Projects = () => {
       deploy: "https://superlative-crisp-fce7b4.netlify.app/",
       front: "https://github.com/IvanMCorrea/E-commerce",
       back: "",
-      tech: "React, CSS, SASS & HTML",
+      /* "React, CSS, SASS & HTML" */
+      tech: (
+        <div className="flex gap-3 my-2">
+          <FontAwesomeIcon
+            icon={faReact}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="React Js"
+          />
+          <FontAwesomeIcon
+            icon={faSass}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="SASS"
+          />
+          <FontAwesomeIcon
+            icon={faCss3Alt}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="CSS"
+          />
+          <FontAwesomeIcon
+            icon={faHtml5}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="HTML"
+          />
+        </div>
+      ),
       destacado: true,
     },
     {
@@ -66,7 +104,35 @@ const Projects = () => {
       deploy: "https://ivanmcorrea.github.io/Arcane/",
       front: "https://github.com/IvanMCorrea/Arcane",
       back: "",
-      tech: "Javascript, CSS, SASS & HTML",
+      /* "Javascript, CSS, SASS & HTML" */
+      tech: (
+        <div className="flex gap-3 my-2">
+          <FontAwesomeIcon
+            icon={faSquareJs}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="JavaScript"
+          />
+          <FontAwesomeIcon
+            icon={faSass}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="SASS"
+          />
+          <FontAwesomeIcon
+            icon={faCss3Alt}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="CSS"
+          />
+          <FontAwesomeIcon
+            icon={faHtml5}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="HTML"
+          />
+        </div>
+      ),
       destacado: true,
     },
     {
@@ -77,7 +143,35 @@ const Projects = () => {
       deploy: "https://superlative-crisp-fce7b4.netlify.app/",
       front: "https://github.com/IvanMCorrea/E-commerce",
       back: "",
-      tech: "Bootstrap, CSS, SASS & HTML",
+      /* "Bootstrap, CSS, SASS & HTML" */
+      tech: (
+        <div className="flex gap-3 my-2">
+          <FontAwesomeIcon
+            icon={faBootstrap}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="Bootstrap"
+          />
+          <FontAwesomeIcon
+            icon={faSass}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="SASS"
+          />
+          <FontAwesomeIcon
+            icon={faCss3Alt}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="CSS"
+          />
+          <FontAwesomeIcon
+            icon={faHtml5}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="HTML"
+          />
+        </div>
+      ),
       destacado: true,
     },
     {
@@ -89,7 +183,23 @@ const Projects = () => {
         "https://64582eab15dd3400087f7496--zingy-dragon-3e07ec.netlify.app/#/login",
       front: "https://github.com/IvanMCorrea/ERP",
       back: "https://github.com/IvanMCorrea/ERP_back",
-      tech: "React, MUI (Material UI), MongoDB, Node & Express",
+      /* "React, MUI (Material UI), MongoDB, Node & Express" */
+      tech: (
+        <div className="flex gap-3 my-2">
+          <FontAwesomeIcon
+            icon={faReact}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="React Js"
+          />
+          <FontAwesomeIcon
+            icon={faNodeJs}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="Node Js"
+          />
+        </div>
+      ),
     },
     {
       title: "Rick & Morty Social Network",
@@ -99,7 +209,23 @@ const Projects = () => {
       deploy: "https://red-social-nu.vercel.app/#/login",
       front: "https://github.com/IvanMCorrea/RedSocial",
       back: "https://github.com/IvanMCorrea/RedSocialBackend",
-      tech: "React, Typescript, Tailwind, MongoDB, Node & Express",
+      /* "React, Typescript, Tailwind, MongoDB, Node & Express" */
+      tech: (
+        <div className="flex gap-3 my-2">
+          <FontAwesomeIcon
+            icon={faReact}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="React Js"
+          />
+          <FontAwesomeIcon
+            icon={faNodeJs}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="Node Js"
+          />
+        </div>
+      ),
     },
     {
       title: "Football League Scrapper",
@@ -109,7 +235,29 @@ const Projects = () => {
       deploy: "https://shimmering-gnome-28eda6.netlify.app/",
       front: "https://github.com/IvanMCorrea/challenge1_front",
       back: "https://github.com/IvanMCorrea/challenge1_back",
-      tech: "MongoDB, Node, Express, CSS & HTML",
+      /* "MongoDB, Node, Express, CSS & HTML" */
+      tech: (
+        <div className="flex gap-3 my-2">
+          <FontAwesomeIcon
+            icon={faNodeJs}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="Node Js"
+          />
+          <FontAwesomeIcon
+            icon={faCss3Alt}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="CSS"
+          />
+          <FontAwesomeIcon
+            icon={faHtml5}
+            size="xl"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            title="HTML"
+          />
+        </div>
+      ),
     },
   ];
 
@@ -143,6 +291,7 @@ const Projects = () => {
                       >
                         {item.title}
                       </h4>
+                      <div className="flex justify-center">{item.tech}</div>
                       <p>{item.description}</p>
                       <div className="my-5">
                         {item.deploy && (
@@ -229,9 +378,10 @@ const Projects = () => {
                     width={280}
                     height={150}
                   />
-                  <h4 className={`${kanit.className} text-lg md:text-xl my-3`}>
+                  <h4 className={`${kanit.className} text-xl md:text-xl my-3`}>
                     {item.title}
                   </h4>
+                  {item.tech}
                   <p>{item.description}</p>
                   <div className="my-5 flex flex-col">
                     {item.deploy && (

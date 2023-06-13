@@ -14,7 +14,7 @@ function Sidebar() {
   const [expanded, setExpanded] = useState<Boolean>(false);
   const sidebarWidth = expanded ? "w-64" : "w-18";
   const menu = [
-    { id: "Home", link: "#", icon: faHome },
+    { id: "Home", link: "#home", icon: faHome },
     { id: "About", link: "#about", icon: faUser },
     { id: "Experience", link: "#experience", icon: faBriefcase },
     { id: "Technologies", link: "#technologies", icon: faMicrochip },

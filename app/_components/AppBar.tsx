@@ -12,7 +12,7 @@ import Link from "next/link";
 
 function AppBar() {
   const menu = [
-    { id: "Home", link: "#", icon: faHome },
+    { id: "Home", link: "#home", icon: faHome },
     { id: "About", link: "#about", icon: faUser },
     { id: "Exp", link: "#experience", icon: faBriefcase },
     { id: "Tech", link: "#technologies", icon: faMicrochip },
