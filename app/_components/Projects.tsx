@@ -5,16 +5,6 @@ import { useKeenSlider } from "keen-slider/react";
 import { kanit } from "../assets/font";
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBootstrap,
-  faCss3Alt,
-  faHtml5,
-  faNodeJs,
-  faReact,
-  faSass,
-  faSquareJs,
-} from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState<Number>(0);
@@ -57,6 +47,134 @@ const Projects = () => {
     );
   }
   //TODO: Add techs with icons
+  const techs = {
+    //? Front
+    react: (
+      <img
+        src="https://icongr.am/devicon/react-original.svg?size=128&color=currentColor"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="ReactJS"
+      />
+    ),
+    vue: (
+      <img
+        src="https://icongr.am/devicon/vuejs-original.svg?size=128&color=currentColor"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="VueJS"
+      />
+    ),
+    ts: (
+      <img
+        src="https://icongr.am/devicon/typescript-original.svg?size=128&color=currentColor"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="TypeScript"
+      />
+    ),
+    js: (
+      <img
+        src="https://icongr.am/devicon/javascript-original.svg?size=128&color=currentColor"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="JavaScript"
+      />
+    ),
+    css: (
+      <img
+        src="https://icongr.am/devicon/css3-original.svg?size=128&color=currentColor"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="CSS"
+      />
+    ),
+    sass: (
+      <img
+        src="https://icongr.am/devicon/sass-original.svg?size=128&color=currentColor"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="SASS"
+      />
+    ),
+    html: (
+      <img
+        src="https://icongr.am/devicon/html5-original.svg?size=128&color=currentColor"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="HTML"
+      />
+    ),
+    //? Back
+    node: (
+      <img
+        src="https://icongr.am/devicon/nodejs-original.svg?size=128&color=currentColor"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="NodeJS"
+      />
+    ),
+    express: (
+      <img
+        src="https://icongr.am/devicon/express-original.svg?size=128&color=currentColor"
+        alt="Express"
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        width={24}
+        height={24}
+        title="Express"
+      />
+    ),
+    adonis: "",
+    //? DB
+    mongo: (
+      <img
+        src="https://icongr.am/devicon/mongodb-original.svg?size=128&color=currentColor"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="MongoDB"
+      />
+    ),
+    //? UI Frameworks
+    mui: (
+      <Image
+        src="/assets/logos/mui_logo.svg"
+        alt="Material UI"
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        width={24}
+        height={24}
+        title="Material UI"
+      />
+    ),
+    tailwind: (
+      <Image
+        src="/assets/logos/tailwind_logo.svg"
+        alt="Tailwind CSS"
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        width={24}
+        height={24}
+        title="Tailwind CSS"
+      />
+    ),
+    bootstrap: (
+      <Image
+        src="/assets/logos/Bootstrap_logo.svg"
+        alt="Bootstrap"
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        width={24}
+        height={24}
+        title="Bootstrap"
+      />
+    ),
+  };
   const projects = [
     {
       title: "Matesito Ecommerce",
@@ -67,34 +185,7 @@ const Projects = () => {
       front: "https://github.com/IvanMCorrea/E-commerce",
       back: "",
       /* "React, CSS, SASS & HTML" */
-      tech: (
-        <div className="flex gap-3 my-2">
-          <FontAwesomeIcon
-            icon={faReact}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="React Js"
-          />
-          <FontAwesomeIcon
-            icon={faSass}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="SASS"
-          />
-          <FontAwesomeIcon
-            icon={faCss3Alt}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="CSS"
-          />
-          <FontAwesomeIcon
-            icon={faHtml5}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="HTML"
-          />
-        </div>
-      ),
+      tech: [techs.react, techs.sass, techs.css, techs.html],
       destacado: true,
     },
     {
@@ -105,34 +196,7 @@ const Projects = () => {
       front: "https://github.com/IvanMCorrea/Arcane",
       back: "",
       /* "Javascript, CSS, SASS & HTML" */
-      tech: (
-        <div className="flex gap-3 my-2">
-          <FontAwesomeIcon
-            icon={faSquareJs}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="JavaScript"
-          />
-          <FontAwesomeIcon
-            icon={faSass}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="SASS"
-          />
-          <FontAwesomeIcon
-            icon={faCss3Alt}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="CSS"
-          />
-          <FontAwesomeIcon
-            icon={faHtml5}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="HTML"
-          />
-        </div>
-      ),
+      tech: [techs.js, techs.sass, techs.css, techs.html],
       destacado: true,
     },
     {
@@ -144,34 +208,7 @@ const Projects = () => {
       front: "https://github.com/IvanMCorrea/E-commerce",
       back: "",
       /* "Bootstrap, CSS, SASS & HTML" */
-      tech: (
-        <div className="flex gap-3 my-2">
-          <FontAwesomeIcon
-            icon={faBootstrap}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="Bootstrap"
-          />
-          <FontAwesomeIcon
-            icon={faSass}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="SASS"
-          />
-          <FontAwesomeIcon
-            icon={faCss3Alt}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="CSS"
-          />
-          <FontAwesomeIcon
-            icon={faHtml5}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="HTML"
-          />
-        </div>
-      ),
+      tech: [techs.bootstrap, techs.sass, techs.css, techs.html],
       destacado: true,
     },
     {
@@ -184,22 +221,15 @@ const Projects = () => {
       front: "https://github.com/IvanMCorrea/ERP",
       back: "https://github.com/IvanMCorrea/ERP_back",
       /* "React, MUI (Material UI), MongoDB, Node & Express" */
-      tech: (
-        <div className="flex gap-3 my-2">
-          <FontAwesomeIcon
-            icon={faReact}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="React Js"
-          />
-          <FontAwesomeIcon
-            icon={faNodeJs}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="Node Js"
-          />
-        </div>
-      ),
+      tech: [
+        techs.react,
+        techs.mui,
+        techs.mongo,
+        techs.node,
+        techs.express,
+        techs.css,
+        techs.html,
+      ],
     },
     {
       title: "Rick & Morty Social Network",
@@ -210,22 +240,16 @@ const Projects = () => {
       front: "https://github.com/IvanMCorrea/RedSocial",
       back: "https://github.com/IvanMCorrea/RedSocialBackend",
       /* "React, Typescript, Tailwind, MongoDB, Node & Express" */
-      tech: (
-        <div className="flex gap-3 my-2">
-          <FontAwesomeIcon
-            icon={faReact}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="React Js"
-          />
-          <FontAwesomeIcon
-            icon={faNodeJs}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="Node Js"
-          />
-        </div>
-      ),
+      tech: [
+        techs.react,
+        techs.ts,
+        techs.tailwind,
+        techs.mongo,
+        techs.node,
+        techs.express,
+        techs.css,
+        techs.html,
+      ],
     },
     {
       title: "Football League Scrapper",
@@ -236,28 +260,7 @@ const Projects = () => {
       front: "https://github.com/IvanMCorrea/challenge1_front",
       back: "https://github.com/IvanMCorrea/challenge1_back",
       /* "MongoDB, Node, Express, CSS & HTML" */
-      tech: (
-        <div className="flex gap-3 my-2">
-          <FontAwesomeIcon
-            icon={faNodeJs}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="Node Js"
-          />
-          <FontAwesomeIcon
-            icon={faCss3Alt}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="CSS"
-          />
-          <FontAwesomeIcon
-            icon={faHtml5}
-            size="xl"
-            className="hover:scale-110 transition-all ease-in-out duration-300"
-            title="HTML"
-          />
-        </div>
-      ),
+      tech: [techs.mongo, techs.node, techs.express, techs.css, techs.html],
     },
   ];
 
@@ -291,7 +294,9 @@ const Projects = () => {
                       >
                         {item.title}
                       </h4>
-                      <div className="flex justify-center">{item.tech}</div>
+                      <div className="flex gap-3 my-2 justify-center">
+                        {item.tech?.map((tech) => tech)}
+                      </div>
                       <p>{item.description}</p>
                       <div className="my-5">
                         {item.deploy && (
@@ -381,7 +386,9 @@ const Projects = () => {
                   <h4 className={`${kanit.className} text-xl md:text-xl my-3`}>
                     {item.title}
                   </h4>
-                  {item.tech}
+                  <div className="flex gap-3 my-2 flex-wrap">
+                    {item.tech?.map((tech) => tech)}
+                  </div>
                   <p>{item.description}</p>
                   <div className="my-5 flex flex-col">
                     {item.deploy && (
