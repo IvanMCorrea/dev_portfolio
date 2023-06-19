@@ -341,7 +341,7 @@ const Projects = () => {
                         alt={item.title}
                         width={800}
                         height={450}
-                        className="mx-auto mb-5"
+                        className="mx-auto mb-5 rounded-2xl"
                         style={{ objectFit: "contain" }}
                       />
                       <h4
@@ -437,7 +437,7 @@ const Projects = () => {
                     alt={item.title}
                     width={1920}
                     height={1080}
-                    style={{ objectFit: "contain" }}
+                    className=" rounded-lg"
                   />
                   <h4 className={`${kanit.className} text-xl md:text-xl my-3`}>
                     {item.title}
