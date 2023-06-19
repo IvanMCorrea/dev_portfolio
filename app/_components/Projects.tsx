@@ -246,8 +246,9 @@ const Projects = () => {
     },
     //? GOOGLE SHEETS
     {
-      title: "Google Sheets View",
-      description: "",
+      title: "Google Sheets Viewer",
+      description:
+        "Google Sheets Viewer is a web application that allows users to visualize data from Google Sheets in a tabular format similar to Excel. It offers a user-friendly interface where data can be easily filtered by product name. With its streamlined design, users can quickly access and analyze specific information with just a few clicks.",
       image: "/assets/projects/gsheet.png",
       deploy: "https://gestion-gsheet.vercel.app/",
       front: "https://github.com/IvanMCorrea/gestion_gsheet",
