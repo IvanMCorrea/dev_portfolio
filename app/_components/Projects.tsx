@@ -338,9 +338,10 @@ const Projects = () => {
                       <Image
                         src={item.image}
                         alt={item.title}
-                        width={500}
-                        height={281}
+                        width={800}
+                        height={450}
                         className="mx-auto mb-5"
+                        style={{ objectFit: "contain" }}
                       />
                       <h4
                         className={`${kanit.className} text-xl md:text-2xl mb-3`}
@@ -433,8 +434,9 @@ const Projects = () => {
                   <Image
                     src={item.image}
                     alt={item.title}
-                    width={240}
-                    height={135}
+                    width={1920}
+                    height={1080}
+                    style={{ objectFit: "contain" }}
                   />
                   <h4 className={`${kanit.className} text-xl md:text-xl my-3`}>
                     {item.title}
