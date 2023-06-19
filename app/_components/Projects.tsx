@@ -46,12 +46,23 @@ const Projects = () => {
       </svg>
     );
   }
-  //TODO: Add techs with icons
+
   const techs = {
     //? Front
+    next: (
+      <Image
+        src="/assets/logos/nextjs_logo.svg"
+        alt="NextJS"
+        width={24}
+        height={24}
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        title="NextJS"
+      />
+    ),
     react: (
-      <img
-        src="https://icongr.am/devicon/react-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/React.svg"
+        alt="ReactJS"
         width={24}
         height={24}
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -59,8 +70,9 @@ const Projects = () => {
       />
     ),
     vue: (
-      <img
-        src="https://icongr.am/devicon/vuejs-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/vue_logo.svg"
+        alt="VueJS"
         width={24}
         height={24}
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -68,8 +80,9 @@ const Projects = () => {
       />
     ),
     ts: (
-      <img
-        src="https://icongr.am/devicon/typescript-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/typescript_logo.svg"
+        alt="TypeScript"
         width={24}
         height={24}
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -77,8 +90,9 @@ const Projects = () => {
       />
     ),
     js: (
-      <img
-        src="https://icongr.am/devicon/javascript-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/js_logo.svg"
+        alt="JavaScript"
         width={24}
         height={24}
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -86,8 +100,9 @@ const Projects = () => {
       />
     ),
     css: (
-      <img
-        src="https://icongr.am/devicon/css3-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/CSS3_logo.svg"
+        alt="CSS"
         width={24}
         height={24}
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -95,8 +110,9 @@ const Projects = () => {
       />
     ),
     sass: (
-      <img
-        src="https://icongr.am/devicon/sass-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/Sass_Logo.svg"
+        alt="SASS"
         width={24}
         height={24}
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -104,8 +120,9 @@ const Projects = () => {
       />
     ),
     html: (
-      <img
-        src="https://icongr.am/devicon/html5-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/HTML5_logo.svg"
+        alt="HTML"
         width={24}
         height={24}
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -114,8 +131,9 @@ const Projects = () => {
     ),
     //? Back
     node: (
-      <img
-        src="https://icongr.am/devicon/nodejs-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/node-js.svg"
+        alt="NodeJS"
         width={24}
         height={24}
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -123,8 +141,8 @@ const Projects = () => {
       />
     ),
     express: (
-      <img
-        src="https://icongr.am/devicon/express-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/express_logo.svg"
         alt="Express"
         className="hover:scale-110 transition-all ease-in-out duration-300"
         width={24}
@@ -135,8 +153,9 @@ const Projects = () => {
     adonis: "",
     //? DB
     mongo: (
-      <img
-        src="https://icongr.am/devicon/mongodb-original.svg?size=128&color=currentColor"
+      <Image
+        src="/assets/logos/mongodb_logo.svg"
+        alt="MongoDB"
         width={24}
         height={24}
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -174,8 +193,20 @@ const Projects = () => {
         title="Bootstrap"
       />
     ),
+    chakra: (
+      <Image
+        src="/assets/logos/chakra.svg"
+        alt="Chakra UI"
+        className="hover:scale-110 transition-all ease-in-out duration-300"
+        width={24}
+        height={24}
+        title="Chakra UI"
+      />
+    ),
   };
+
   const projects = [
+    //? MATESITO
     {
       title: "Matesito Ecommerce",
       description:
@@ -188,6 +219,7 @@ const Projects = () => {
       tech: [techs.react, techs.sass, techs.css, techs.html],
       destacado: true,
     },
+    //? ARCANE
     {
       title: "Arcane",
       description: "Final Proyect for Javascript course of CoderHouse.",
@@ -199,6 +231,7 @@ const Projects = () => {
       tech: [techs.js, techs.sass, techs.css, techs.html],
       destacado: true,
     },
+    //? POKEMON
     {
       title: "Pokemon: Origins",
       description:
@@ -211,6 +244,24 @@ const Projects = () => {
       tech: [techs.bootstrap, techs.sass, techs.css, techs.html],
       destacado: true,
     },
+    //? GOOGLE SHEETS
+    {
+      title: "Google Sheets View",
+      description: "",
+      image: "/assets/projects/gsheet.png",
+      deploy: "https://gestion-gsheet.vercel.app/",
+      front: "https://github.com/IvanMCorrea/gestion_gsheet",
+      /* "React, Typescript, Tailwind, MongoDB, Node & Express" */
+      tech: [
+        techs.next,
+        techs.react,
+        techs.ts,
+        techs.chakra,
+        techs.css,
+        techs.html,
+      ],
+    },
+    //? ERP
     {
       title: "ERP (Enterprise Resource Planning)",
       description:
@@ -231,6 +282,7 @@ const Projects = () => {
         techs.html,
       ],
     },
+    //? RICK & MORTY
     {
       title: "Rick & Morty Social Network",
       description:
@@ -251,6 +303,7 @@ const Projects = () => {
         techs.html,
       ],
     },
+    //? SCRAPPER
     {
       title: "Football League Scrapper",
       description:
@@ -284,9 +337,9 @@ const Projects = () => {
                     >
                       <Image
                         src={item.image}
-                        alt="Working Developer"
+                        alt={item.title}
                         width={500}
-                        height={250}
+                        height={281}
                         className="mx-auto mb-5"
                       />
                       <h4
@@ -379,9 +432,9 @@ const Projects = () => {
                 <article key={index}>
                   <Image
                     src={item.image}
-                    alt="Working Developer"
-                    width={280}
-                    height={150}
+                    alt={item.title}
+                    width={240}
+                    height={135}
                   />
                   <h4 className={`${kanit.className} text-xl md:text-xl my-3`}>
                     {item.title}
