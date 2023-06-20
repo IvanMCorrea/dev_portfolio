@@ -216,7 +216,7 @@ const Projects = () => {
       front: "https://github.com/IvanMCorrea/E-commerce",
       back: "",
       /* "React, CSS, SASS & HTML" */
-      tech: [techs.react, techs.sass, techs.css, techs.html],
+      tech: [techs.react, techs.sass, techs.css],
       destacado: true,
     },
     //? ARCANE
@@ -253,14 +253,7 @@ const Projects = () => {
       deploy: "https://gestion-gsheet.vercel.app/",
       front: "https://github.com/IvanMCorrea/gestion_gsheet",
       /* "React, Typescript, Tailwind, MongoDB, Node & Express" */
-      tech: [
-        techs.next,
-        techs.react,
-        techs.ts,
-        techs.chakra,
-        techs.css,
-        techs.html,
-      ],
+      tech: [techs.next, techs.react, techs.ts, techs.chakra],
     },
     //? ERP
     {
@@ -273,15 +266,7 @@ const Projects = () => {
       front: "https://github.com/IvanMCorrea/ERP",
       back: "https://github.com/IvanMCorrea/ERP_back",
       /* "React, MUI (Material UI), MongoDB, Node & Express" */
-      tech: [
-        techs.react,
-        techs.mui,
-        techs.mongo,
-        techs.node,
-        techs.express,
-        techs.css,
-        techs.html,
-      ],
+      tech: [techs.react, techs.mui, techs.mongo, techs.node, techs.express],
     },
     //? RICK & MORTY
     {
@@ -300,8 +285,6 @@ const Projects = () => {
         techs.mongo,
         techs.node,
         techs.express,
-        techs.css,
-        techs.html,
       ],
     },
     //? SCRAPPER
