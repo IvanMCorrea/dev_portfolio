@@ -252,8 +252,18 @@ const Projects = () => {
       image: "/assets/projects/gsheet.png",
       deploy: "https://gestion-gsheet.vercel.app/",
       front: "https://github.com/IvanMCorrea/gestion_gsheet",
-      /* "React, Typescript, Tailwind, MongoDB, Node & Express" */
+      /* "React, Typescript, Tailwind, Next, Chakra" */
       tech: [techs.next, techs.react, techs.ts, techs.chakra],
+    },
+    //? DOLLAR EXCHANGE
+    {
+      title: "Exchange App",
+      description: "",
+      image: "/assets/projects/exchange.png",
+      deploy: "https://exchange-app-theta.vercel.app/",
+      front: "https://github.com/IvanMCorrea/exchange-app",
+      /* "React, Typescript, Tailwind, Next" */
+      tech: [techs.next, techs.react, techs.ts, techs.tailwind],
     },
     //? ERP
     {
