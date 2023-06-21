@@ -258,7 +258,7 @@ const Projects = () => {
     //? DOLLAR EXCHANGE
     {
       title: "Exchange App",
-      description: "",
+      description: "App to convert ARS to dollars using the dolarsi api",
       image: "/assets/projects/exchange.png",
       deploy: "https://exchange-app-theta.vercel.app/",
       front: "https://github.com/IvanMCorrea/exchange-app",
