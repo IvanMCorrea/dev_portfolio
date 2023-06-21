@@ -222,7 +222,8 @@ const Projects = () => {
     //? ARCANE
     {
       title: "Arcane",
-      description: "Final Proyect for Javascript course of CoderHouse.",
+      description:
+        "Final Project for Javascript course of CoderHouse. This project replicates the arcane launch page as a netflix series",
       image: "/assets/projects/arcane.png",
       deploy: "https://ivanmcorrea.github.io/Arcane/",
       front: "https://github.com/IvanMCorrea/Arcane",
@@ -235,7 +236,7 @@ const Projects = () => {
     {
       title: "Pokemon: Origins",
       description:
-        "Final Project for Coderhouse in the Web Development course.",
+        "Final Project for Coderhouse in the Web Development course. Here I review the basics of html and css for the creation of a website",
       image: "/assets/projects/pokemon.png",
       deploy: "https://superlative-crisp-fce7b4.netlify.app/",
       front: "https://github.com/IvanMCorrea/E-commerce",
