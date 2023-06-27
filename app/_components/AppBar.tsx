@@ -15,7 +15,7 @@ function AppBar() {
     { id: "Home", link: "#home", icon: faHome },
     { id: "About", link: "#about", icon: faUser },
     { id: "Exp", link: "#experience", icon: faBriefcase },
-    { id: "Tech", link: "#technologies", icon: faMicrochip },
+    /* { id: "Tech", link: "#technologies", icon: faMicrochip }, */
     { id: "Projects", link: "#projects", icon: faFileCode },
   ];
   return (
