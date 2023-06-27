@@ -193,7 +193,14 @@ const Projects = () => {
       front: "https://github.com/IvanMCorrea/challenge1_front",
       back: "https://github.com/IvanMCorrea/challenge1_back",
       /* "MongoDB, Node, Express, CSS & HTML" */
-      tech: [techs.mongo, techs.node, techs.express, techs.css, techs.html],
+      tech: [
+        techs.mongo,
+        techs.node,
+        techs.express,
+        techs.js,
+        techs.css,
+        techs.html,
+      ],
     },
   ];
 
