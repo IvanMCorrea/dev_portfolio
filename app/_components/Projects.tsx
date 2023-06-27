@@ -1,211 +1,96 @@
 "use client";
-import "keen-slider/keen-slider.min.css";
-import React, { useState } from "react";
-import { useKeenSlider } from "keen-slider/react";
+import React, { Fragment, useState } from "react";
 import { kanit } from "../assets/font";
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  deploy: string;
+  front: string;
+  back?: string;
+  tech: Tech[];
+  destacado?: Boolean;
+}
+interface Tech {
+  src: string;
+  title: string;
+}
 
 const Projects = () => {
-  const [currentSlide, setCurrentSlide] = useState<Number>(0);
-  const [loaded, setLoaded] = useState<Boolean>(false);
-  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-    initial: 0,
-    loop: true,
-    slides: { origin: "center", perView: 1, spacing: 20 },
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
-    },
-    created() {
-      setLoaded(true);
-    },
-  });
-
-  function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
-    return (
-      <svg
-        onClick={props.onClick}
-        className={`arrow text-neutral-800 dark:text-neutral-300 ${
-          props.left ? "-left-10" : "-right-10"
-        }`}
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-      >
-        {props.left && (
-          <path
-            fill="currentColor"
-            d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
-          />
-        )}
-        {!props.left && (
-          <path
-            fill="currentColor"
-            d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
-          />
-        )}
-      </svg>
-    );
-  }
-
-  const techs = {
+  const techs: { [key: string]: Tech } = {
     //? Front
-    next: (
-      <Image
-        src="/assets/logos/nextjs_logo.svg"
-        alt="NextJS"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="NextJS"
-      />
-    ),
-    react: (
-      <Image
-        src="/assets/logos/React.svg"
-        alt="ReactJS"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="ReactJS"
-      />
-    ),
-    vue: (
-      <Image
-        src="/assets/logos/vue_logo.svg"
-        alt="VueJS"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="VueJS"
-      />
-    ),
-    ts: (
-      <Image
-        src="/assets/logos/typescript_logo.svg"
-        alt="TypeScript"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="TypeScript"
-      />
-    ),
-    js: (
-      <Image
-        src="/assets/logos/js_logo.svg"
-        alt="JavaScript"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="JavaScript"
-      />
-    ),
-    css: (
-      <Image
-        src="/assets/logos/CSS3_logo.svg"
-        alt="CSS"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="CSS"
-      />
-    ),
-    sass: (
-      <Image
-        src="/assets/logos/Sass_Logo.svg"
-        alt="SASS"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="SASS"
-      />
-    ),
-    html: (
-      <Image
-        src="/assets/logos/HTML5_logo.svg"
-        alt="HTML"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="HTML"
-      />
-    ),
+    next: {
+      src: "/assets/logos/nextjs_logo.svg",
+      title: "NextJS",
+    },
+    react: {
+      src: "/assets/logos/React.svg",
+      title: "ReactJS",
+    },
+    vue: {
+      src: "/assets/logos/vue_logo.svg",
+      title: "VueJS",
+    },
+    ts: {
+      src: "/assets/logos/typescript_logo.svg",
+      title: "TypeScript",
+    },
+    js: {
+      src: "/assets/logos/js_logo.svg",
+      title: "JavaScript",
+    },
+    css: {
+      src: "/assets/logos/CSS3_logo.svg",
+      title: "CSS",
+    },
+    sass: {
+      src: "/assets/logos/Sass_Logo.svg",
+      title: "SASS",
+    },
+    html: {
+      src: "/assets/logos/HTML5_logo.svg",
+      title: "HTML",
+    },
     //? Back
-    node: (
-      <Image
-        src="/assets/logos/node-js.svg"
-        alt="NodeJS"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="NodeJS"
-      />
-    ),
-    express: (
-      <Image
-        src="/assets/logos/express_logo.svg"
-        alt="Express"
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        width={24}
-        height={24}
-        title="Express"
-      />
-    ),
-    adonis: "",
+    node: {
+      src: "/assets/logos/node-js.svg",
+      title: "NodeJS",
+    },
+    express: {
+      src: "/assets/logos/express_logo.svg",
+      title: "Express",
+    },
+    /* adonis: "", */
     //? DB
-    mongo: (
-      <Image
-        src="/assets/logos/mongodb_logo.svg"
-        alt="MongoDB"
-        width={24}
-        height={24}
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        title="MongoDB"
-      />
-    ),
+    mongo: {
+      src: "/assets/logos/mongodb_logo.svg",
+      title: "MongoDB",
+    },
     //? UI Frameworks
-    mui: (
-      <Image
-        src="/assets/logos/mui_logo.svg"
-        alt="Material UI"
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        width={24}
-        height={24}
-        title="Material UI"
-      />
-    ),
-    tailwind: (
-      <Image
-        src="/assets/logos/tailwind_logo.svg"
-        alt="Tailwind CSS"
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        width={24}
-        height={24}
-        title="Tailwind CSS"
-      />
-    ),
-    bootstrap: (
-      <Image
-        src="/assets/logos/Bootstrap_logo.svg"
-        alt="Bootstrap"
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        width={24}
-        height={24}
-        title="Bootstrap"
-      />
-    ),
-    chakra: (
-      <Image
-        src="/assets/logos/chakra.svg"
-        alt="Chakra UI"
-        className="hover:scale-110 transition-all ease-in-out duration-300"
-        width={24}
-        height={24}
-        title="Chakra UI"
-      />
-    ),
+    mui: {
+      src: "/assets/logos/mui_logo.svg",
+      title: "Material UI",
+    },
+    tailwind: {
+      src: "/assets/logos/tailwind_logo.svg",
+      title: "Tailwind CSS",
+    },
+    bootstrap: {
+      src: "/assets/logos/Bootstrap_logo.svg",
+      title: "Bootstrap",
+    },
+    chakra: {
+      src: "/assets/logos/chakra.svg",
+      title: "Chakra UI",
+    },
   };
 
-  const projects = [
+  const projects: Project[] = [
     //? MATESITO
     {
       title: "Matesito Ecommerce",
@@ -312,6 +197,23 @@ const Projects = () => {
     },
   ];
 
+  const [selected, setSelected] = useState<Tech | null>(null);
+
+  const [filteredProjects, setFilteredProjects] = useState<Project[] | null>(
+    projects
+  );
+
+  const handleSelect = (tech: Tech) => {
+    if (selected && selected.title === tech.title) {
+      setSelected(null);
+      setFilteredProjects(projects);
+    } else {
+      setSelected(tech);
+      let filtered = projects.filter((project) => project.tech?.includes(tech));
+      setFilteredProjects(filtered);
+    }
+  };
+
   return (
     <section className="w-full py-10" id="projects">
       <h2
@@ -319,159 +221,97 @@ const Projects = () => {
       >
         Projects
       </h2>
-      <div className="mb-10">
-        <div className="navigation-wrapper">
-          <div ref={sliderRef} className="mb-5 flex overflow-hidden">
-            {projects[0] &&
-              projects.map(
-                (item, index) =>
-                  item.destacado && (
-                    <article
-                      className={`keen-slider__slide number-slide${index} text-center`}
-                      key={index}
-                    >
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={800}
-                        height={450}
-                        className="mx-auto mb-5 rounded-2xl"
-                        style={{ objectFit: "contain" }}
-                      />
-                      <h4
-                        className={`${kanit.className} text-xl md:text-2xl mb-3`}
-                      >
-                        {item.title}
-                      </h4>
-                      <div className="flex gap-3 my-2 justify-center">
-                        {item.tech?.map((tech) => tech)}
-                      </div>
-                      <p>{item.description}</p>
-                      <div className="my-5">
-                        {item.deploy && (
-                          <Link
-                            href={item.deploy}
-                            target="_blanck"
-                            className="bg-gradient-to-r from-fuchsia-500 to-pink-500 py-2 px-4 rounded-md mr-2 text-center uppercase hover:scale-110 transition-all ease-in-out duration-300 font-semibold"
-                          >
-                            Deploy
-                          </Link>
-                        )}
-                        {item.front && (
-                          <Link
-                            href={item.front}
-                            target="_blanck"
-                            className="bg-gradient-to-r from-blue-600 to-violet-600 py-2 px-4 rounded-md mr-2 text-center uppercase hover:scale-110 transition-all ease-in-out duration-300 font-semibold"
-                          >
-                            Frontend Code
-                          </Link>
-                        )}
-                        {item.back && (
-                          <Link
-                            href={item.back}
-                            target="_blanck"
-                            className="bg-gradient-to-r from-emerald-500 to-emerald-900 py-2 px-4 rounded-md text-center uppercase hover:scale-110 transition-all ease-in-out duration-300 font-semibold"
-                          >
-                            Backend Code
-                          </Link>
-                        )}
-                      </div>
-                    </article>
-                  )
-              )}
-          </div>
-          {loaded && instanceRef.current && (
-            <>
-              <Arrow
-                left
-                onClick={(e: any) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
+      <article className=" bg-neutral-100 dark:bg-neutral-800 p-5 rounded-3xl my-5">
+        <h3 className="text-center mb-5">Filter by technology</h3>
+        <div className="flex grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-10 justify-between items-center">
+          {Object.keys(techs).map((key: string) => (
+            <div onClick={() => handleSelect(techs[key])} key={key}>
+              <Image
+                src={techs[key].src}
+                width={48}
+                height={48}
+                alt={techs[key].title}
+                title={techs[key].title}
+                className={`hover:scale-125 transition-all ease-in-out duration-300 ${
+                  selected &&
+                  selected.title !== techs[key].title &&
+                  "opacity-50"
+                }`}
               />
-
-              <Arrow
-                onClick={(e: any) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-              />
-            </>
-          )}
+            </div>
+          ))}
         </div>
-        {loaded && instanceRef.current && (
-          <div className="dots">
-            {[
-              ...Array(instanceRef.current.track.details.slides.length).keys(),
-            ].map((idx) => {
-              return (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    instanceRef.current?.moveToIdx(idx);
-                  }}
-                  className={"dot" + (currentSlide === idx ? " active" : "")}
-                ></button>
-              );
-            })}
-          </div>
-        )}
-      </div>
-      <h3
-        className={`${kanit.className} text-xl md:text-2xl py-10 bg-gradient-to-r from-gray-700 dark:from-slate-300 dark:to-zinc-200 to-slate-700 bg-clip-text text-transparent`}
-      >
-        More projects
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 bg-neutral-100 dark:bg-neutral-800 p-10 rounded-3xl">
-        {projects[0] &&
-          projects.map(
-            (item, index) =>
-              !item.destacado && (
-                <article key={index}>
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={1920}
-                    height={1080}
-                    className=" rounded-lg"
+      </article>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {filteredProjects &&
+          filteredProjects[0] &&
+          filteredProjects.map((item, index) => (
+            <article
+              key={index}
+              className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-3xl"
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={1920}
+                height={1080}
+                className=" rounded-xl"
+              />
+              <h4 className={`${kanit.className} text-xl md:text-xl my-3`}>
+                {item.title}
+                {item.destacado && (
+                  <FontAwesomeIcon
+                    icon={faStar}
+                    size="xs"
+                    className="text-purple-600 dark:text-yellow-400 ml-2"
                   />
-                  <h4 className={`${kanit.className} text-xl md:text-xl my-3`}>
-                    {item.title}
-                  </h4>
-                  <div className="flex gap-3 my-2 flex-wrap">
-                    {item.tech?.map((tech) => tech)}
-                  </div>
-                  <p>{item.description}</p>
-                  <div className="my-5 flex flex-col">
-                    {item.deploy && (
-                      <Link
-                        href={item.deploy}
-                        target="_blanck"
-                        className="bg-gradient-to-r from-fuchsia-500 to-pink-500 py-2 px-4 rounded-md mb-2 text-center uppercase hover:scale-110 transition-all ease-in-out duration-300 font-semibold"
-                      >
-                        Deploy
-                      </Link>
-                    )}
-                    {item.front && (
-                      <Link
-                        href={item.front}
-                        target="_blanck"
-                        className="bg-gradient-to-r from-blue-600 to-violet-600 py-2 px-4 rounded-md mb-2 text-center uppercase hover:scale-110 transition-all ease-in-out duration-300 font-semibold"
-                      >
-                        Frontend Code
-                      </Link>
-                    )}
-                    {item.back && (
-                      <Link
-                        href={item.back}
-                        target="_blanck"
-                        className="bg-gradient-to-r from-emerald-500 to-emerald-900 py-2 px-4 rounded-md text-center uppercase hover:scale-110 transition-all ease-in-out duration-300 font-semibold"
-                      >
-                        Backend Code
-                      </Link>
-                    )}
-                  </div>
-                </article>
-              )
-          )}
+                )}
+              </h4>
+              <div className="flex gap-3 my-2 flex-wrap">
+                {item.tech?.map((tech, indx) => (
+                  <Image
+                    src={tech.src}
+                    width={24}
+                    height={24}
+                    alt={tech.title}
+                    title={tech.title}
+                    key={indx}
+                    className="hover:scale-125 transition-all ease-in-out duration-300"
+                  />
+                ))}
+              </div>
+              <p>{item.description}</p>
+              <div className="my-5 flex flex-col">
+                {item.deploy && (
+                  <Link
+                    href={item.deploy}
+                    target="_blanck"
+                    className="bg-gradient-to-r from-fuchsia-500 to-pink-500 py-2 px-4 rounded-md mb-2 text-center uppercase hover:scale-125 transition-all ease-in-out duration-300 font-semibold"
+                  >
+                    Deploy
+                  </Link>
+                )}
+                {item.front && (
+                  <Link
+                    href={item.front}
+                    target="_blanck"
+                    className="bg-gradient-to-r from-blue-600 to-violet-600 py-2 px-4 rounded-md mb-2 text-center uppercase hover:scale-125 transition-all ease-in-out duration-300 font-semibold"
+                  >
+                    Frontend Code
+                  </Link>
+                )}
+                {item.back && (
+                  <Link
+                    href={item.back}
+                    target="_blanck"
+                    className="bg-gradient-to-r from-emerald-500 to-emerald-900 py-2 px-4 rounded-md text-center uppercase hover:scale-125 transition-all ease-in-out duration-300 font-semibold"
+                  >
+                    Backend Code
+                  </Link>
+                )}
+              </div>
+            </article>
+          ))}
       </div>
     </section>
   );
