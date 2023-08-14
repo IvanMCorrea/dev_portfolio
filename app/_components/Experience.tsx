@@ -69,7 +69,13 @@ const Experience = () => {
               <div className="z-20 flex items-center order-1 bg-gradient-to-r from-fuchsia-600 to-purple-600 shadow-xl w-4 h-4 rounded-full">
                 <h1 className="mx-auto font-semibold text-lg"></h1>
               </div>
-              <article className="order-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <article
+                className={`order-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg shadow-xl w-5/12 px-6 py-4 ${
+                  index % 2 === 0
+                    ? "animate-fade-right animate-once"
+                    : "animate-fade-left animate-once"
+                }`}
+              >
                 <div className="flex justify-between items-end mb-2">
                   <h3 className="font-bold text-xl">{job.title}</h3>
                   <span className="text-sm font-medium">{job.from_to}</span>

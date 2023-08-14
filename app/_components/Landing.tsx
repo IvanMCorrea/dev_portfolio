@@ -20,7 +20,7 @@ const Landing = () => {
     },
   ];
   return (
-    <header className="flex w-full gap-20 justify-center">
+    <header className="flex w-full gap-20 justify-center animate-fade-up animate-once">
       <div className="relative w-[25%] max-sm:hidden">
         <Image src="/assets/prog.svg" alt="Working Developer" fill priority />
       </div>
