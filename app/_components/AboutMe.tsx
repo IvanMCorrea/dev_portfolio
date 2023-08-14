@@ -13,8 +13,8 @@ const AboutMe = (props: Props) => {
       </h2>
       <p>
         Fullstack developer with strong understanding of the latest front-end
-        technologies, including NodeJS, MongoDB, React, React Native, NextJS,
-        TypeScript and others.
+        technologies, including NodeJS, MongoDB, React, React Native, NextJS and
+        TypeScript.
       </p>
       <br />
       <p>
