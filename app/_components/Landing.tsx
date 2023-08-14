@@ -31,7 +31,7 @@ const Landing = () => {
           Ivan Correa
         </h1>
         <span
-          className={`${kanit.className} text-2xl md:text-3xl bg-gradient-to-r from-gray-700 to-slate-700 dark:from-slate-300 dark:to-zinc-200 bg-clip-text text-transparent`}
+          className={`${kanit.className} text-2xl md:text-3xl bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent`}
         >
           Full Stack Developer
         </span>
