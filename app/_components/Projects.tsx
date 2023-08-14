@@ -239,7 +239,7 @@ const Projects = () => {
                 height={48}
                 alt={techs[key].title}
                 title={techs[key].title}
-                className={`hover:scale-125 transition-all ease-in-out duration-300 ${
+                className={`hover:scale-125 transition-all ease-in-out duration-300 cursor-pointer ${
                   selected &&
                   selected.title !== techs[key].title &&
                   "opacity-50"
