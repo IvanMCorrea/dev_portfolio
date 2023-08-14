@@ -7,7 +7,7 @@ import Projects from "./_components/Projects";
 export default function Home() {
   return (
     <main
-      className="flex min-h-screen flex-col items-center m-auto px-12 md:px-24 py-12 max-w-6xl md:gap-20"
+      className="flex min-h-screen flex-col items-center m-auto px-12 md:px-40 py-12 max-w-6xl md:gap-20"
       id="home"
     >
       <Landing />

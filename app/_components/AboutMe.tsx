@@ -12,15 +12,13 @@ const AboutMe = (props: Props) => {
         About me
       </h2>
       <p>
-        I have had the opportunity to work on various projects, ranging from
-        small mobile apps to large-scale e-commerce platforms. I have developed
-        a strong understanding of the latest front-end technologies, including,
-        NodeJs, MongoDB, React Native, and others.
+        Fullstack developer with strong understanding of the latest front-end
+        technologies, including NodeJS, MongoDB, React, React Native, NextJS,
+        TypeScript and others.
       </p>
       <br />
       <p>
-        I am a quick learner and I am always eager to expand my skill set by
-        experimenting with new technologies and techniques. I am excited about
+        Quick learner and always eager to expand my skills. I am excited about
         the opportunity to bring my skills and experience to a new challenge.
       </p>
     </section>

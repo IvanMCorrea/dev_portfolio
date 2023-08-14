@@ -255,7 +255,7 @@ const Projects = () => {
           filteredProjects.map((item, index) => (
             <article
               key={index}
-              className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-3xl"
+              className="flex flex-col grow bg-neutral-100 dark:bg-neutral-800 p-4 rounded-3xl"
             >
               <Image
                 src={item.image}
@@ -287,7 +287,7 @@ const Projects = () => {
                   />
                 ))}
               </div>
-              <p>{item.description}</p>
+              <p className="flex grow">{item.description}</p>
               <div className="my-5 flex flex-col">
                 {item.deploy && (
                   <Link
