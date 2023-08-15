@@ -293,7 +293,7 @@ const Projects = () => {
                   <Link
                     href={item.deploy}
                     target="_blanck"
-                    className="bg-gradient-to-r from-fuchsia-500 to-pink-500 py-2 px-4 rounded-md mb-2 text-center uppercase hover:scale-125 transition-all ease-in-out duration-300 font-semibold"
+                    className="bg-gradient-to-r from-fuchsia-500 to-pink-500 py-2 px-4 rounded-md mb-2 text-center uppercase hover:scale-110 transition-all ease-in-out duration-300 font-semibold"
                   >
                     Deploy
                   </Link>
@@ -302,7 +302,7 @@ const Projects = () => {
                   <Link
                     href={item.front}
                     target="_blanck"
-                    className="bg-gradient-to-r from-blue-600 to-violet-600 py-2 px-4 rounded-md mb-2 text-center uppercase hover:scale-125 transition-all ease-in-out duration-300 font-semibold"
+                    className="bg-gradient-to-r from-blue-600 to-violet-600 py-2 px-4 rounded-md mb-2 text-center uppercase hover:scale-110 transition-all ease-in-out duration-300 font-semibold"
                   >
                     Frontend Code
                   </Link>
@@ -311,7 +311,7 @@ const Projects = () => {
                   <Link
                     href={item.back}
                     target="_blanck"
-                    className="bg-gradient-to-r from-emerald-500 to-emerald-900 py-2 px-4 rounded-md text-center uppercase hover:scale-125 transition-all ease-in-out duration-300 font-semibold"
+                    className="bg-gradient-to-r from-emerald-500 to-emerald-900 py-2 px-4 rounded-md text-center uppercase hover:scale-110 transition-all ease-in-out duration-300 font-semibold"
                   >
                     Backend Code
                   </Link>
